@@ -279,7 +279,7 @@ def build_embed(regions):
                "value": "🟢 Còn máy" if regions.get(c) else "🔴 Hết máy",
                "inline": True} for c, i in REGIONS.items()]
     return {"title": "<:ugphone:1517134433319260230> Trạng thái UGPhone Trial", "color": color,
-            "fields": fields, "footer": {"text": f"Uptime: {get_time_24h()}"}}
+            "fields": fields, "footer": {"text": f"<a:hourglass:1513803772428685313> Uptime: {get_time_24h()}"}}
 
 def build_embed_error(summary, reason, fail_streak):
     desc = (f"🚨 **Đang gặp lỗi:** {summary}\n"
