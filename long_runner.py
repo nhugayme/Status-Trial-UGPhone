@@ -274,12 +274,12 @@ def delete_message_after(mid, delay):
     threading.Timer(delay, _d).start()
 
 def build_embed(regions):
-    color = 0x57f287 if any(regions.get(c) for c in REGIONS) else 0xed4245
+    color = 0x57f287 if any(regions.get(c) for c in REGIONS) else 0xff0000
     fields = [{"name": f"{i['flag']} {i['name']}",
                "value": "🟢 Còn máy" if regions.get(c) else "🔴 Hết máy",
                "inline": True} for c, i in REGIONS.items()]
     return {"title": "<:ugphone:1517134433319260230> Trạng thái UGPhone Trial", "color": color,
-            "fields": fields, "footer": {"text": f"<a:hourglass:1513803772428685313> Uptime: {get_time_24h()}"}}
+            "fields": fields, "footer": {"text": f"Uptime: {get_time_24h()}"}}
 
 def build_embed_error(summary, reason, fail_streak):
     desc = (f"🚨 **Đang gặp lỗi:** {summary}\n"
