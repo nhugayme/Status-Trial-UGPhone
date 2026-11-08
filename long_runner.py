@@ -278,14 +278,14 @@ def build_embed(regions):
     fields = [{"name": f"{i['flag']} {i['name']}",
                "value": "🟢 Còn máy" if regions.get(c) else "🔴 Hết máy",
                "inline": True} for c, i in REGIONS.items()]
-    return {"title": "📱 Trạng thái UGPhone Trial", "color": color,
+    return {"title": "<:ugphone:1517134433319260230> Trạng thái UGPhone Trial", "color": color,
             "fields": fields, "footer": {"text": f"Uptime: {get_time_24h()}"}}
 
 def build_embed_error(summary, reason, fail_streak):
     desc = (f"🚨 **Đang gặp lỗi:** {summary}\n"
             f"🤔 **Lí do:** {reason}\n"
             f"🛠️ Chúng tôi sẽ tìm ra nguyên nhân và cố gắng sửa chữa lỗi đang gặp phải.")
-    return {"title": "📱 Trạng thái UGPhone Trial", "color": 0xed4245,
+    return {"title": "<:ugphone:1517134433319260230> Trạng thái UGPhone Trial", "color": 0xed4245,
             "description": desc,
             "footer": {"text": f"Uptime: {get_time_24h()} | Fail liên tiếp: {fail_streak}p"}}
 
