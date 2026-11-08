@@ -275,8 +275,8 @@ def delete_message_after(mid, delay):
 
 def build_embed(regions):
     color = 0x57f287 if any(regions.get(c) for c in REGIONS) else 0xff0000
-    fields = [{"name": f"{i['flag']}| {i['name']}",
-               "value": "- 🟢 Còn máy" if regions.get(c) else "- 🔴 Hết máy",
+    fields = [{"name": f"{i['flag']} | {i['name']}",
+               "value": "⮑ 🟢 Còn máy" if regions.get(c) else "⮑ 🔴 Hết máy",
                "inline": True} for c, i in REGIONS.items()]
     return {"title": "<:ugphone:1517134433319260230> Trạng thái UGPhone Trial", "color": color,
             "fields": fields, "footer": {"text": f"🕜 Uptime: {get_time_24h()}"}}
