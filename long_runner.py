@@ -55,7 +55,7 @@ REGIONS = {
 
 tz_vn = pytz.timezone('Asia/Ho_Chi_Minh')
 def get_time_24h():
-    return datetime.now(tz_vn).strftime("%H:%M ngày %d/%m/%Y")
+    return datetime.now(tz_vn).strftime("%H:%M:%S ngày %d/%m/%Y")
 
 def ensure_dirs():
     for d in (DATA_DIR, DEBUG_DIR):
